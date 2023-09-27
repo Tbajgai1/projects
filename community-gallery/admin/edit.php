@@ -125,7 +125,7 @@ while($row = mysqli_fetch_array($result)){
  
 
 
-<h2>Edit - <?php echo $filename; ?></h2>
+<h2>Edit - <?php echo $title; ?></h2>
 <form id="myform" name="myform" method="post" action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']); ?>" enctype="multipart/form-data">
 
 		<div class="form-group">
