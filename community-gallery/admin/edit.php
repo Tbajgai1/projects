@@ -1,7 +1,6 @@
 <?php
 require_once("../login/classes/Login.php");
 
-
 $login = new Login(); 
 
 if($login->isUserLoggedIn() == true){
@@ -14,24 +13,29 @@ if($login->isUserLoggedIn() == true){
 }
 include("../includes/header.php");
 
+//Test
+echo $author_id;
 
-	$navLinks = "";
-	$title = "";
-	$description = "";
-	$valDescription = "";
-	$strValidationMessage = "";
-	$valTitle  = "";
-	$pageid = "";
-	$filename = "";
-	$author_id = "";
+$navLinks = "";
+$title = "";
+$description = "";
+$valDescription = "";
+$strValidationMessage = "";
+$valTitle  = "";
+$pageid = "";
+$filename = "";
 
-	
+
 if(isset($_GET['id'])){
 	$pageid = $_GET['id'];
 }
+
+//Test
+echo $pageid;
+
 	// this is mission critical, so in case $char_id has no value, we need to give it a default value
 	if(!isset($pageid)){
-		$default = mysqli_query($con, "SELECT id FROM communitygallery LIMIT 1") or die(mysqli_error($con));
+		$default = mysqli_query($con, "SELECT id FROM communitygallery WHERE author_id = $author_id LIMIT 1") or die(mysqli_error($con));
 		while($row = mysqli_fetch_array($default)){
 			$pageid = $row['id']; 
 		}
@@ -74,9 +78,6 @@ if(isset($_GET['id'])){
 
 		}
 
-
-		
- 
  }//end if submit
 
  if(isset($_POST['delete'])){
@@ -112,7 +113,7 @@ while($row = mysqli_fetch_array($result)){
 		$title =  $row['title'];
 		$description =  $row['description'];
 		
-		//echo "$fname, $lname";
+		// echo "$fname, $lname";
 	}
 
 // \ Step 2
@@ -124,7 +125,7 @@ while($row = mysqli_fetch_array($result)){
  
 
 
-<h2>Edit - <?php echo $title  ?></h2>
+<h2>Edit - <?php echo $pageid; ?></h2>
 <form id="myform" name="myform" method="post" action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']); ?>" enctype="multipart/form-data">
 
 		<div class="form-group">
@@ -186,7 +187,7 @@ if($strValidationMessage){
  		<h3>Select an Image to Edit</h3>
  		<?php 
 
- 		echo $navLinks ;
+ 			echo $navLinks ;
  		 ?>
 
  	</div><!-- \ right col -->
