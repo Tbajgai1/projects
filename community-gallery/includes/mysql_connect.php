@@ -4,9 +4,8 @@
 $con = mysqli_connect("50.87.171.53", "bajgaitc_tbajgai1", "Tulsiram@12345", "bajgaitc_communitygallery");
 // Check connection
 if (mysqli_connect_errno()) {
-  die("Failed to connect to MySQL: " . mysqli_connect_error());
+  echo "Failed to connect to MySQL: " . mysqli_connect_error();
 }
-
 
 //This stops SQL Injection in POST vars 
   foreach ($_POST as $key => $value) { 

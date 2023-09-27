@@ -1,5 +1,10 @@
 <?php
+ob_start();
+    // create/read session, absolutely necessary
+    session_start();
 
+    error_reporting(E_ALL);
+    ini_set('display_errors', '1');
 
 /**
  * Class login
@@ -27,7 +32,7 @@ class Login
     public function __construct()
     {
         // create/read session, absolutely necessary
-        session_start();
+        // session_start();
 
         // check the possible login actions:
         // if user tried to log out (happen when user clicks logout button)
@@ -127,3 +132,5 @@ class Login
         return false;
     }
 }
+ob_end_flush();
+?>

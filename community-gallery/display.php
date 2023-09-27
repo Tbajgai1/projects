@@ -93,15 +93,15 @@ if($idNext){
 		<div class="display-info">
 			<?php
 		if($profile_image === "NULL") {
-						$profile_images = "avatar.png";
+						$profile_image = "avatar.png";
 					}else {
-						$profile_images = $profile_image;
+						$profile_image = $profile_image;
 					}
 		?>
 			<h3 class="display-username">
 			
 				<a class="display-allpost" href="<?php echo BASE_URL ?>/allpost.php?user_id=<?php echo $authId; ?>">
-					<img style="border-radius: 10px; width: 40px" src="login/profile-img/resized/<?php echo $profile_images; ?>">
+					<img style="border-radius: 10px; width: 40px" src="login/profile-img/resized/<?php echo $profile_image; ?>">
 					<?php echo $user_name;?>
 				</a>
 			</h3>

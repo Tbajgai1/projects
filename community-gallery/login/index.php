@@ -1,4 +1,9 @@
 <?php
+ob_start();
+
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
 include('../includes/header.php');
 /**
  * A simple, clean and secure PHP Login Script / MINIMAL VERSION
@@ -33,10 +38,12 @@ $login = new Login();
 if ($login->isUserLoggedIn() == true) {
     // the user is logged in. you can do whatever you want here.
     // for demonstration purposes, we simply show the "you are logged in" view.
-    header("Location: http://tbajgai1.dmitstudent.ca/dmit2503/community-gallery/index.php");
-
+    header("Location:https://bajgait.com/projects/community-gallery/index.php");
+    exit;
 } else {
     // the user is not logged in. you can do whatever you want here.
     // for demonstration purposes, we simply show the "you are not logged in" view.
     include("views/not_logged_in.php");
 }
+ob_end_flush();
+?>

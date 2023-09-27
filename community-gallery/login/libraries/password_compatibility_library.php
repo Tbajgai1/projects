@@ -1,4 +1,7 @@
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
 /**
  * A Compatibility library with PHP 5.5's simplified password hashing API.
  *
@@ -83,9 +86,17 @@ if (!defined('PASSWORD_DEFAULT')) {
             }
         } else {
             $buffer = '';
-            if (function_exists('mcrypt_create_iv') && !defined('PHALANGER')) {
-                $buffer = mcrypt_create_iv($raw_salt_len, MCRYPT_DEV_URANDOM);
-                if ($buffer) {
+            $buffer_valid = false;
+            
+            // if (function_exists('mcrypt_create_iv') && !defined('PHALANGER')) {
+            //     $buffer = mcrypt_create_iv($raw_salt_len, MCRYPT_DEV_URANDOM);
+            //     if ($buffer) {
+            //         $buffer_valid = true;
+            //     }
+            // }
+            if (function_exists('random_bytes') && !defined('PHALANGER')) {
+                $buffer = random_bytes($raw_salt_len);
+                if ($buffer !== false) {
                     $buffer_valid = true;
                 }
             }
