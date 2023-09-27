@@ -1,0 +1,725 @@
+body {
+	background-color: rgb(160, 182, 160);
+}
+
+.header {
+	position: relative;
+	max-width: 97vw;
+	margin: 0 auto;
+}
+
+.read-more {
+	text-decoration: underline;
+	color: rgb(195, 51, 32);
+	cursor: pointer;
+}
+
+h4 {
+	width: 100%;
+	text-align: center;
+	border-bottom: 1px solid rgb(170, 165, 165);
+	font-size: 1.5rem;
+}
+
+h2 {
+	text-transform: uppercase;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+p {
+	text-align: center;
+	line-height: 3rem;
+	font-size: 1.2rem;
+}
+
+.header {
+	width: 100vw;
+	height: 37vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.header-bg-img .bg-img {
+	position: absolute;
+	top: 0;
+	left: 0;
+	max-width: 100%;
+	opacity: .4;
+}
+
+.hamburger-menu {
+	position: absolute;
+	right: 1rem;
+	top: 1rem;
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+
+.hamburger-menu > div {
+	width: 2rem;
+	height: 0.4rem;
+	background-color: black;
+	margin-bottom: 0.1rem;
+	position: relative;
+}
+
+.logo-header {
+	padding-top: 4rem;
+}
+
+.logo {
+	width: 60px;
+	position: absolute;
+	top: 0.5rem;
+	left: 0.5rem;
+}
+
+.logo img {
+	max-width: 100%;
+	border-radius: 50%;
+}
+
+.header-title {
+	margin: auto;
+	text-align: center;
+}
+
+.header-title .h-1 {
+	color:rgb(178, 32, 3);
+	font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+	font-size: 2.5rem;
+	line-height: 1.2;
+}
+
+.header-title .sub-heading-1 {
+	font-family:Verdana, Geneva, Tahoma, sans-serif;
+	color: rgb(77, 1, 52);
+	line-height: 2rem;
+	margin: 1rem auto 0 auto;
+}
+
+.info-banner {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	background: red;
+	opacity: 0.8;
+	width: 100%;
+	text-align: center;
+	height: 2rem;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.info-banner p {
+	color: white;
+}
+
+
+/* MAIN SECTION STYLE */
+/* NAV MENU LAYOUT */
+
+
+.menu {
+	visibility: hidden;
+	top: -20rem;
+	left: -20rem;
+	max-height: 0;
+	position: absolute;
+	transition: all 0.4s ease-in-out;
+}
+
+/* only visible when hamburger menu is clicked, when active-nav is toggeled */
+.active-nav{
+	visibility: visible;
+	left: 0rem;
+	top: -1rem;
+}
+
+/* only visible when hamburger menu is clicked, when active-nav is toggeled */
+.hamburger-div1{
+	display: none;
+}
+
+/* only visible when hamburger menu is clicked, when active-nav is toggeled */
+.hamburger-div2{
+	transform: rotate(-50deg);
+	top: 0.5rem;
+}
+
+/* only visible when hamburger menu is clicked, when active-nav is toggeled */
+.hamburger-div3{
+	transform: rotate(50deg);
+}
+
+.nav .menu ul {
+	list-style-type: none;
+	background-color: rgb(82, 12, 12);
+	padding-left: 0;
+	text-align: center;
+	margin-top: 0;
+}
+
+.nav .menu ul li {
+	line-height: 4rem;
+	border-bottom: 1px solid rgb(33, 111, 62);
+	
+}
+
+.nav .menu ul li:hover {
+	background-color:rgb(112, 6, 6);
+	cursor: pointer;
+}
+
+.nav .menu ul li a{
+	text-decoration: none;
+	color: rgb(24, 207, 24);
+	padding: 2rem;
+	text-transform: uppercase;
+}
+
+/* General section layout */
+
+.general {
+	max-width: 1200px;
+	margin: 0 auto;
+	display: flex;
+	flex-flow: wrap;
+	justify-content: center;
+	gap: 1rem;
+}
+
+.office-hours,
+.contact-info,
+.general-info {
+	margin: 1rem auto;
+	flex: 1 1 22rem;
+	background-color: rgb(201, 228, 226);
+}
+
+.general-info {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border-top: 12px solid green;
+}
+
+.general-info ol {
+	display: flex;
+	list-style-type: none;
+	flex-direction: column;
+	font-size: 1.3rem;
+	line-height: 3rem;
+	padding-left: 0;
+	align-items: center;
+	width: 100%;
+	margin-top: 0;
+}
+
+.general ol li {
+	width: 100%;
+	border-bottom: 1px solid rgb(170, 165, 165);
+	text-align: center;
+
+}
+
+.general ol:last-child {
+	margin-bottom: 0;
+}
+
+.general ol li a{
+	text-decoration: none;
+	color: rgb(73, 69, 189);
+}
+
+.office-hours {
+	border-top: 12px solid rgb(225, 44, 44);
+	/* width: 100%; */
+}
+
+.office-hours .hours {
+	display: flex;
+	list-style-type: none;
+	flex-direction: column;
+	font-size: 1.3rem;
+	line-height: 3rem;
+	padding-left: 0;
+	align-items: center;
+}
+
+.office-hours .hours  table tr td {
+	border-bottom: 1px solid rgb(170, 165, 165);
+	width: 100vw;
+	text-align: center;
+}
+
+.office-hours .hours  table tr td:first-child {
+	padding-right: 1rem;
+}
+
+
+.contact-info {
+	border-top: 12px solid rgb(64, 34, 183);
+}
+
+.contact-info .contact p{
+	border-bottom: 1px solid rgb(170, 165, 165);
+}
+
+
+/* feature article section */
+
+.feature-article {
+	background-color: rgb(23, 166, 191);
+}
+
+.feature-article .feature-img {
+	width: 97vw;
+	max-height: 25rem;
+	overflow: hidden;
+	margin: 0 auto;
+}
+
+.new-exciting {
+	display: flex;
+	justify-content: space-between;
+	background-color: rgb(74, 119, 119);
+	padding: 2rem 2rem;
+	flex-wrap: wrap;
+	align-items: stretch;
+
+}
+
+.new-exciting > h2 {
+	width: 100%;
+	height: 2rem;
+}
+
+.new-img img{
+	height: 100%;
+	width: 100%;
+}
+
+.new-exciting div {
+	width: 30%;
+	height: 70%;
+}
+
+.content-img-wrap {
+	background-color: rgb(206, 206, 255);
+}
+
+.content-width {
+	margin: 2rem;
+	color: rgb(4, 27, 4);
+	font-size: 1.1rem;
+}
+
+.content-width h2 {
+	color: rgb(0, 117, 25);
+}
+.content-width >img {
+	float: left;
+	width: 50%;
+	margin-right: 1rem;
+}
+
+.see-more {
+	background-color: rgb(203, 191, 61);
+	padding: 1px 5px;
+}
+
+
+
+.feature-img img {
+	max-width: 100%;
+	height: auto;
+}
+
+.feature-article-text {
+	margin: 1rem auto;
+	padding: 1rem;
+	margin-bottom: 0;
+}
+
+.feature-article-text p {
+	line-height: 1.8rem;
+	text-align: left;
+	padding: 0 1rem;
+}
+
+.feature-article-text h2 {
+	font-size: 2rem;
+	
+}
+
+/* articles styles */
+
+.secondary-articles {
+	max-width: 1200px;
+	display: flex;
+	flex-flow: wrap;
+	margin: 0 auto;
+}
+
+.article-one,
+.article-two,
+.article-three {
+	margin: 0 auto;
+	flex: 1 1 20rem;
+	overflow: hidden;
+	background-color: rgb(217, 217, 240);
+}
+
+.article-one .image,
+.article-two .image,
+.article-three .image{
+	overflow: hidden;
+	margin: 0 auto;
+	padding: 1rem;
+}
+
+.article-one img,
+.article-two img,
+.article-three img{
+	max-width: 100%;
+}
+
+.article-one .article-text,
+.article-two .article-text,
+.article-three .article-text{
+	margin: 0 auto;
+	width: 100%;
+	padding: 0 1rem;
+	padding-bottom: 2rem;
+}
+
+.article-one .article-text h2,
+.article-two .article-text h2,
+.article-three .article-text h2 {
+	color: rgb(255, 17, 0);
+	padding: 2rem 0 2rem 0;
+	text-align: center;
+	margin: 0 auto;
+	font-size: 1.3rem;
+}
+
+.article-one .article-text p,
+.article-two .article-text p,
+.article-three .article-text p {
+	line-height: 1.8rem;
+	text-align: left;
+	padding: 0 1rem;
+}
+
+.article-one .article-text h4,
+.article-two .article-text h4,
+.article-three .article-text h4 {
+	font-size: 1.2rem;
+	text-align: left;
+	margin: 1rem auto;
+}
+
+.campsite-lists,
+.restaurant-lists {
+	padding-left: 0;
+	width: 90%;
+	margin: 0 auto;
+}
+
+.campsite-lists li,
+.restaurant-lists li {
+	list-style-type: disc;
+	margin-top: 1rem;	
+}
+
+.article-three {
+	border-bottom: 1px solid grey;
+}
+
+/* AD */
+
+.ad {
+	margin: 1rem auto;
+	display: flex;
+	justify-content: center;
+}
+
+
+
+/* footer styles */
+
+.footer {
+	background-color: rgb(44, 43, 39);
+	color: white;
+	padding-bottom: 1rem;
+}
+
+.bg-container {
+	display: flex;
+	align-items: center;
+	height: 10rem;
+}
+
+.footer-list {
+	display: flex;
+	flex-flow: wrap;
+	gap: 1rem;
+	padding-left: 0;
+	margin: 0 auto;
+	width: 90%;
+	margin-bottom: 1rem;
+	justify-content: center;
+}
+
+.bg-container .footer-list li {
+	list-style-type: none;
+	padding: 0.5rem 1rem;
+	background-color: brown;
+	border-radius: 0.3rem;
+}
+
+.bg-container .footer-list li:hover {
+	background-color: rgb(32, 84, 32);
+}
+
+.bg-container .footer-list li a{
+	text-decoration: none;
+	color: white;
+}
+
+.footer small {
+	display: block;
+	text-align: center;
+	margin-bottom: 1rem;
+}
+
+/* -- Code for the Cookie Compliance popover window -- */
+
+#cookiePopup {
+  background-color: #ffffff;
+  position: absolute;
+  left: 5%;
+  bottom: 0;
+  font-size: 14px;
+  width: 90%;
+  box-shadow: 0 0 2em rgba(5, 0, 31, 0.15);
+  font-family: "Poppins", sans-serif;
+  text-align: justify;
+  line-height: 1.8em;
+  margin: 0 auto;
+  padding: 2em 1.4em;
+  border-radius: 6px;
+  transition: all 0.5s ease-in-out;
+}
+
+#cookiePopup p {
+  text-align: center;
+  margin: 1.4em 0;
+}
+#cookiePopup button {
+  background-color: #6859fe;
+  border: none;
+  color: #ffffff;
+  font-size: 1.2em;
+  padding: 1em 1.4em;
+  display: block;
+  position: relative;
+  margin: auto;
+  border-radius: 5px;
+}
+#cookiePopup a {
+  color: #6859fe;
+}
+
+.hide {
+  visibility: hidden;
+  
+}
+.show {
+  visibility: visible;
+ 
+}
+/* -- End of Code for the Cookie Compliance popover window -- */
+
+
+
+@media screen  and (min-width: 752px){
+
+	header {
+		position: unset;
+	}
+
+	.menu {
+		visibility: visible;
+		top: -21rem;
+		left: 5rem;
+		position: relative;
+		max-width: 88%;
+		transition: all 0.4s ease-in-out;
+	}
+	
+	.hamburger-menu {
+		display: none;
+	}
+
+	.nav .menu ul {
+		display: flex;
+		justify-content: space-around;
+		height: 3.5rem;
+		border-radius: 0 0 0 20px;font-size: 0.9rem;
+		width: 101%;
+		background-color: unset;
+	}
+
+	.nav .menu ul li {
+		border-bottom: 0;
+		height: 3.5rem;
+		border-radius: 0 0 0 20px;
+		background-color: rgb(10, 54, 8);
+		
+	}
+
+	.nav .menu ul li:hover {
+		background-color:rgb(112, 6, 6);
+	}
+
+	.header-title .h-1 {
+		margin-top: 2rem;
+	}
+
+	.contact-info {
+		max-width: 752px;
+		margin-bottom: 2rem;
+	}
+
+	.feature-article .feature-img {
+		padding: 4%;
+	}
+
+	.feature-article .feature-article-text {
+		width: 45rem;
+	}
+
+}
+
+
+
+@media screen  and (min-width: 1092px){
+
+	.feature-article {
+		display: flex;
+		align-items: center;
+		padding: 0 1rem 0 1rem;
+		margin-bottom: 1rem;
+		margin: 1rem auto;
+		flex-flow: wrap;
+	}
+
+	.feature-article .feature-article-text {
+		/* background-color: aquamarine; */
+		width: 60%;
+	}
+
+	.feature-article .feature-img {
+		width: 40%;
+		padding: 1rem 0;
+	}
+
+	.bg-container .footer-list {
+		display: flex;
+		flex-flow: no-wrap;
+		width: 100%;
+		margin-bottom: 0;
+	}
+
+	.footer {
+		display: flex;
+		align-items: center;
+		justify-content: space-around;
+		padding: 1rem;
+	}
+
+	.footer small {
+		display: block;
+		text-align: center;
+		margin-bottom: 0;
+	}
+	
+}
+
+@media screen  and (min-width: 1205px){
+	
+	body {
+		max-width: 1205px;
+		margin: 0 auto;
+	}
+	.header {
+		max-width: 1190px;
+		margin: 0 auto;
+	}
+
+	.info-banner {
+		max-width: 1200px;
+	}
+
+	
+
+}
+
+/* Animations */
+
+
+/* animation for info banner on the header */
+@keyframes move {
+	0% {
+	  transform: translateX(0);
+	}
+	50% {
+	  transform: translateX(80%);
+	}
+	100% {
+	  transform: translateX(-80%);
+	}
+  }
+  
+  .info-banner p {
+	animation: move 10s linear infinite;
+  }
+
+  /* Animation for image grow on hover */
+  @keyframes growimg {
+	0% {
+	  transform: scale(1);
+	}
+
+	100% {
+	  transform: scale(1.1);
+	}
+  }
+  
+  .new-img img:hover {
+	animation: growimg 0.4s forwards;
+  }
+
+
+
+/* INFO LIST ANIMATION */
+
+  
+  ol li:hover {
+	animation: grow 0.3s linear forwards;
+	border-bottom: none;
+  }
+  
+  @keyframes grow {
+	0% {
+	  transform: scale(1);
+	}
+	100% {
+	  transform: scale(1.2);
+	}
+  }
+  

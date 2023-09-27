@@ -1,0 +1,3 @@
+User-Agent: *
+Allow: /
+https://explore-milk-river-alberta.netlify.app/sitemap.xml

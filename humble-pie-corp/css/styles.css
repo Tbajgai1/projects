@@ -1,0 +1,375 @@
+/* set the background colour of the body */
+body{
+    background-color: #faefef;
+}
+
+/* create the container class for the fixed width, center-page framework */
+.container{
+    margin: 0 auto; /* top+bottom 0px, right+left centered */
+    width: 960px;
+    font-size: 100%;
+    line-height: 1.5; /* 1.5 line spacing */
+}
+.container-about{
+    margin: 0 auto; /* top+bottom 0px, right+left centered */
+    width: 960px;
+    font-size: 100%;
+    line-height: 1.5; /* 1.5 line spacing */
+    background-image: url(../img/Pie-store.jpg);
+    background-repeat: no-repeat;
+}
+
+/*---COMMON TYPOGRAPHY---*/
+
+.un-list a,
+.banner h1,
+.banner a,
+.our-story h2,
+.find-us-title h2,
+.main-about h1{
+    font-family: 'Fjalla One', sans-serif;
+}
+.our-story p,
+.banner p,
+.find-us-title p,
+.store-schedule,
+.footer,
+.main-about p,
+.form label,
+.form .submit-button button,
+.footer-about{
+    font-family: 'Cantarell', sans-serif;
+}
+.our-story p,
+.banner p,
+.find-us,
+.contact-page-paragraphs,
+.main-about p,
+.form label{
+    color: #2d2824;
+}
+.footer,
+.un-list a,
+.footer-about{
+    color: #37342f;
+}
+.un-list a,
+.footer h3,
+.banner p,
+.main-about p,
+.form .submit-button button,
+.footer-about h3{
+    font-size: 24px;
+}
+.banner h1,
+.banner a,
+.our-story h2,
+.find-us-title h2,
+.find-us-title p a,
+.main-about h1{
+    color: #f15156;
+}
+.form .submit-button button,
+.banner a{
+    color: #faefef;
+}  
+.our-story p,
+.store-schedule p,
+.find-us-title p,
+.main-about .contact-page-paragraphs p,
+.main-about .contact-page-paragraphs span,
+.main-about .contact-page-paragraphs small,
+.footer p,
+.footer-about p{
+    font-size: 16px;
+}
+.store-schedule h3,
+.store-schedule p,
+.store-schedule .place,
+.footer{
+    text-align: center;
+}
+
+/*--INDEX PAGE TYPOGRAPHY--*/
+
+.banner p{
+    text-align: left;
+}
+.un-list a{ 
+    text-decoration: none;
+}
+.banner h1{
+    font-size: 72px;
+}
+.banner a{
+    font-size: 30px;
+    text-decoration: none;
+}
+.our-story h2{
+    font-size: 48px;
+    text-align: center;
+}
+.find-us-title h2{
+    font-size: 46px;
+    text-align: center;
+}
+.store-schedule h3{
+    font-size: 22px;
+}
+.store-schedule .place{
+    font-weight: bold;
+}
+
+/*--INDEX PAGE LAYOUT--*/
+
+            /*-Header section layout-*/
+
+.header{
+    background-image: url(../img/Pie-inside-closeup.jpg);
+    background-size: auto;
+    width: 960px;
+    height: 999px;
+}
+.navigation{
+    background-color: rgba(178,165,165,0.7);
+    display: flex;
+    padding: 10px 0 10px 52px;
+    margin-bottom: 250px;
+}
+.navigation .un-list a{ 
+    margin-right: 50px;
+}
+.navigation .logo img{
+    margin-right: 450px;
+}
+.un-list{
+    display: flex;
+    align-items: center;
+}
+.banner{
+    background-color: rgba(250, 239,239, 0.75);
+    border: 1px solid #595755;
+    width: 450px;
+    padding: 60px 50px 38px 50px;
+    margin: auto;  
+    text-align: center;
+}
+.banner p{
+    margin-bottom: 35px;
+}
+.banner a{   
+    background-color: #f15156;
+    padding: 14px 30px;
+    border-radius: 5px;
+}
+        /*-Our Story section layout-*/
+
+.article{
+    display: flex;
+    margin: 103px 0;
+}
+.our-story{
+    background-color: rgba(178, 165, 165, 0.75);
+    padding: 50px 50px;
+}
+.our-story h2{
+    margin-bottom: 10px;
+}
+.our-story p{
+    margin-bottom: 22px;
+}
+
+        /*-Find US section layout-*/
+
+.find-us-title{
+    background-image: url(../img/Floury-hands.jpg);
+    height: 653px;
+    padding: 34px 50px 28px 50px;
+}
+.find-us-title  .find-us-title h2{
+    margin-bottom: 28px;
+}
+.find-us .find-us-title p{
+    margin-bottom: 28px;
+}
+.store-schedule{
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+}
+.store-schedule section{
+    width: 216px;
+    padding: 0 30px;
+}
+.store-schedule h3,
+.store-schedule .place{
+    margin-bottom: 14px;
+}
+.store-schedule .time{
+    margin: 18px 0 32px 0;
+}
+
+/*--Footer Layout--*/
+
+.footer{
+    background-color: rgba(178, 165, 165,0.75);
+    padding: 50px;
+    margin-top: 100px;
+}
+.footer h3{
+    margin-bottom: 25px;
+}
+.footer .social-media-icons img{
+    margin-right: 16px;
+    
+}
+.footer .social-media-icons{
+    margin-bottom: 25px;
+}
+
+/*--ABOUT US STYLES--*/
+
+        /*--Header Section Typography--*/
+
+.main-about h1{
+    font-size: 72px;
+    text-align: center;
+}
+.main-about .contact-page-paragraphs span{
+    font-weight: bold;
+    display: block;
+}
+        
+        /*--Form Section Typography--*/
+
+.form label{
+    font-size: 18px;
+}      
+
+        /*--Footer Typography--*/
+.footer-about{
+    text-align: center;
+}
+
+/*--HEADER LAYOUT--*/
+
+.navigation-about{
+    background-color: rgba(178,165,165,0.7);
+    display: flex;
+    padding: 10px 0 10px 52px;
+    margin-bottom: 96px;
+}
+.navigation-about .un-list a{ 
+    margin-right: 50px;
+}
+.navigation-about img{
+    margin-right: 450px;
+}
+.navigation-about .un-list{
+    display: flex;
+    align-items: center;
+}
+
+/*--MAIN LAYOUT--*/
+        /*--Text section layout--*/
+.main-about{
+    background-color: rgba(178,165,165, 0.75);
+    border: 1px solid #37342f;
+    width: 442px;
+    margin: auto;
+    padding: 44px;
+}
+.main-about p{
+    margin-bottom: 16px;
+}
+.main-about .contact-page-paragraphs .small{
+    margin-bottom: 26px;
+}
+.contact-page-paragraphs .paragraph-last{
+    margin-bottom: 40px;
+}
+.line{
+    background-color: #2d2824;
+    width: 440px;
+    height: 2px;
+    margin: auto;
+}
+
+        /*--Form section layout--*/
+
+.form{
+    margin-top: 46px;
+}
+.form .name label,
+.form .email label,
+.form .message label{
+    display: block;
+    margin: 12px 0;
+}
+.form .name input,
+.form .email input,
+.form .message textarea,
+.form .checkbox input{
+    background-color: #faefef;
+    border: 1px solid #000000;
+}
+.form .name input,
+.form .email input{
+    width: 440px;
+    height: 50px;
+}
+.form .message textarea{
+    max-width: 440px;
+    min-width: 440px;
+    max-height: 150px;
+    min-height: 150px;
+}
+.form .checkbox{
+    display: flex;
+    margin: 24px 0 43px 0;
+    align-items: center;
+}
+.form .checkbox input{
+    margin-right: 15px;
+    width: 18px;
+    height: 18px;
+}
+.form .submit-button button{
+     background-color: #f15156;
+     height: 50px;
+     width: 200px;
+     border-radius: 5px;
+     border: none;    
+}
+.submit-button{
+    padding: 0 121px;
+    margin: auto;
+}
+
+/*--Footer Layout--*/
+.footer-about{
+    background-color: rgba(178, 165, 165);
+    padding: 50px;
+    margin-top: 76px;
+}
+.footer-about h3{
+    margin-bottom: 25px;
+}
+.footer-about .social-media-icons img{
+    margin-right: 16px;
+    
+}
+.footer-about .social-media-icons{
+    margin-bottom: 25px;
+}
+
+/*--Hover Effects--*/
+.header .banner .find-us-now a:hover,
+.form .submit-button button:hover{
+    text-decoration: underline; 
+    cursor: pointer;
+}
+.un-list li a:hover{
+    border-bottom: 2px solid #37342f;
+}
+

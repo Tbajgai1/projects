@@ -1,0 +1,387 @@
+
+body {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+a{
+	 z-index:10000;
+}
+.navbar {
+  margin-bottom: 20px;
+}
+.thumb {
+	float:left;
+	width: 156px;
+	height: 156px;
+	margin: 10px 6.5px 10px 0px;
+	padding:3px;
+}
+.thumb-small {
+	float:left;
+	margin: 2px;
+	padding:1px;
+}
+
+.thumb-title {
+		
+	font-size: 14px;
+	padding: 0px 3px 3px 10px;
+
+	/**** Simple CSS Truncate Text here *****/
+	white-space:nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-align:center;
+
+}
+
+.display-image-holder{
+	width: 65%;
+	float:left;
+	position: relative;
+}
+.display-info{
+	float:left;
+	width: 35%;
+	padding:10px;
+	position: relative;
+	top:-35px;
+}
+.display-heading{
+	color:#fff;
+	padding:0px 10px !important;
+	margin: 0px !important;
+	position: relative;
+	top:50px;
+	z-index: 100;
+}
+.container{
+	box-shadow: 0px 0px 5px #000;
+	padding-top: -20px !important;
+	padding-bottom: 18px !important;
+
+	position: relative;
+	top:-20px;
+	border-radius:5px;
+
+}
+.navbar{
+		z-index:2;
+		position: relative;
+	top:-20px;	
+}
+.display-description{
+	margin-top:20px;
+	margin-bottom:20px;
+	font-size: 90%;
+}
+footer{
+
+	font-size: 80%;
+	text-align:center;
+	
+    color: #999;
+    text-align: center;
+    padding:5px;
+	position: absolute;
+	bottom: -100px;
+	left:  50%;
+}
+
+textarea{
+	height:140px !important;
+}
+
+.nextPrevBtnz{
+	padding: 2rem 1rem;
+	margin: 1rem auto;
+	display: flex;
+	justify-content: center;
+	gap: 10px;
+	width: 100%;
+	flex: 1 !important;
+}
+
+.btn-info,
+.btn-default {
+	width: 10rem !important;
+	padding: 0.5rem !important;
+	font-size: 1.7rem !important;
+}
+
+
+/* added CSS */
+
+.index-column h1 {
+	text-align: center;
+	margin: 3rem auto;
+}
+
+.index-name {
+	padding: 1rem 0 1rem 1.5rem;
+	background-color: #0093E9;
+	background-image: linear-gradient(160deg, #80D0C7 0%, #0093E9 100%);
+	display: flex;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 5px;
+}
+
+
+.span-name {
+	font-size: 2.5rem;
+	color: white;
+	
+}
+
+.index-card {
+	margin-bottom: 2rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 10px;
+	padding: 1.5rem;
+	background-color: rgb(232, 232, 232);
+}
+
+.index-name-span a{
+	margin-left: 10px;
+	font-size: 1.5rem;
+	color: rgb(255, 255, 255);
+	text-decoration: underline;
+	
+	
+} 
+
+.index-image-show {
+	background: rgb(255, 255, 255);
+    padding: 0.5rem 1rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+	border-radius: 5px;
+}
+
+.index-description {
+	width: 180px;
+	margin-top: auto;
+}
+
+/* Display Page */
+.display-heading {
+	color: rgb(5, 107, 89);
+	text-shadow: 2px 2px 4px #d0c5d2;
+}
+.display-title {
+	text-align: center;
+}
+
+.display-username {
+	background-color: rgb(207, 240, 244);
+	width: 100%;
+	margin-right: auto;
+	padding: 7px;
+	display: flex;
+	margin-top: 25px;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 10px;
+}
+
+.display-description {
+	text-align: center;
+	padding-bottom: 4rem;
+	border-bottom: 3px solid rgb(207, 240, 244);
+}
+
+.display-info svg {
+	display: inline;
+}
+
+/* Rating system display page */
+/* Rated already */
+.ratings-table {
+	background-color: rgb(110, 147, 148);
+	padding-bottom: 1rem;
+}
+
+.rating-heading {
+	text-transform: uppercase;
+	text-align: center;
+	color: azure;
+}
+
+.rating-done {
+	font-size: 2rem;
+	text-align: center;
+	color: rgb(155, 22, 22);
+}
+
+.average-rating-text {
+	text-align: center;
+	margin-top: 3rem;
+}
+
+.average-rating {
+	font-size: 1.9rem;
+	text-align: center;
+}
+
+.rated-by {
+	font-size: 1.6rem;
+	text-align: center;
+
+}
+
+/* Rating system display page */
+/* NOT Rated */
+
+
+.Rating h3{
+	text-align: center;
+	margin-bottom: 2rem;
+	text-transform: uppercase;
+	font-size: 2rem;
+}
+
+.be-first {
+	color:rgb(224, 222, 170);
+	padding-top:20px; 
+	text-align:center;
+}
+
+.btn-ratings {
+	width: 40% !important;
+	margin: 1rem 31.4% !important;
+	background-color: rgb(212, 212, 105) !important;
+	color: black !important;
+	text-transform: uppercase;
+}
+
+/* Styling the stars */
+
+li input[type="radio"] {
+	display: none;
+}
+
+.rating-ul {
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	margin-left: -45px;
+}
+
+.rating-ul li{
+	color: rgb(212, 212, 105);
+}
+
+.rating-ul li svg:hover {
+	color: rgb(255, 255, 0);
+	filter: drop-shadow(3px 5px 2px rgba(10, 8, 8, 0.4));
+	
+}
+
+
+.rating-ul li.active, 
+.rating-ul li.secondary-active {
+	filter: drop-shadow(3px 5px 2px rgba(10, 8, 8, 0.4));
+	color: rgb(255, 255, 0);
+
+}
+
+.rated-ul {
+	display: flex;
+	list-style: none;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	margin-left: -45px;
+}
+
+.active-rated {
+	color: rgb(255, 255, 0);
+	filter: drop-shadow(3px 5px 2px rgba(121, 125, 139, 0.4));
+}
+
+.non-active-rated {
+	color: rgb(212, 212, 105);
+}
+
+.done-ratings-table {
+	background-color: #8ba2f4;
+	padding: 1rem 0;
+}
+
+/* Register message */
+.registerMsg {
+	font-size: 2rem;
+	color: green;
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.registerMsgErr {
+	font-size: 2rem;
+	color: red;
+	text-align: center;
+	margin-top: 1rem;
+}
+
+.bg-info {
+	position: relative;
+	padding-top: 7rem;
+}
+
+.allpost-userinfo {
+	position: absolute;
+	top: 1.5rem;
+	left: 1.7rem;
+}
+
+.display-username a {
+	text-decoration: none !important;
+	padding: 5px 15px 5px 5px;
+	border-radius: 5px;
+}
+.display-username a:hover {
+	padding: 5px 15px 5px 5px;
+	background-color: #80D0C7;
+}
+
+
+
+/* Custom, iPhone Retina */ 
+	@media only screen and (max-width : 480px) {
+
+		.display-image-holder{
+			width: 100%;
+			
+		}
+		.display-info{
+			width: 100%;
+			margin-top:40px;
+		}
+
+
+
+	}
+
+	/* Extra Small Devices, Phones */ 
+	@media only screen and (min-width : 480px) {
+
+	}
+
+	/* Small Devices, Tablets */
+	@media only screen and (max-width : 768px) {
+		.display-image-holder{
+			width: 100%;
+			
+		}
+		.display-info{
+			width: 100%;
+			margin-top:40px;
+		}
+	}
