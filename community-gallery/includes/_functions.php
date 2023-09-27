@@ -81,14 +81,16 @@ function saveImageBasedOnType($image, $fileName) {
 }
 
 // Transparency
+// Transparency
 function setTransparency($new_image, $image_source) {
     $transparencyIndex = imagecolortransparent($image_source);
-    $transparencyColor = imagecolorsforindex($image_source, $transparencyIndex);
-
-    if ($transparencyIndex >= 0) {
+    
+    if ($transparencyIndex !== -1) {
+        $transparencyColor = imagecolorsforindex($image_source, $transparencyIndex);
         $transparencyIndex = imagecolorallocate($new_image, $transparencyColor['red'], $transparencyColor['green'], $transparencyColor['blue']);
         imagefill($new_image, 0, 0, $transparencyIndex);
         imagecolortransparent($new_image, $transparencyIndex);
     }
 }
+
 ?>
