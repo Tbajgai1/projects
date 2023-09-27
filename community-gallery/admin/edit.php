@@ -14,7 +14,7 @@ if($login->isUserLoggedIn() == true){
 include("../includes/header.php");
 
 //Test
-echo $author_id;
+// echo $author_id;
 
 $navLinks = "";
 $title = "";
@@ -31,7 +31,7 @@ if(isset($_GET['id'])){
 }
 
 //Test
-echo $pageid;
+// echo $pageid;
 
 	// this is mission critical, so in case $char_id has no value, we need to give it a default value
 	if(!isset($pageid)){
@@ -125,7 +125,7 @@ while($row = mysqli_fetch_array($result)){
  
 
 
-<h2>Edit - <?php echo $pageid; ?></h2>
+<h2>Edit - <?php echo $filename; ?></h2>
 <form id="myform" name="myform" method="post" action="<?php echo htmlspecialchars($_SERVER['REQUEST_URI']); ?>" enctype="multipart/form-data">
 
 		<div class="form-group">
