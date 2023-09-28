@@ -5,12 +5,11 @@
 		$newwidth = $width;
 	}
 	$imgRatio = $width/$height;
-	$newheight = $newwidth / $imgRatio;
+	$newheight = (int)($newwidth / $imgRatio);
+
 	$thumb = imagecreatetruecolor($newwidth, $newheight);
 	$source = imagecreatefromjpeg($file);
 	imagecopyresampled($thumb, $source, 0, 0, 0, 0, $newwidth, $newheight, $width, $height);
-
-   
 
 
 	$newFileName = $folder .  basename($file);// get original filename for dest filename
@@ -33,11 +32,11 @@ function createSquareImageCopy($file, $folder, $newWidth){
     if($original_aspect >= $thumb_aspect) {
     
     $new_height = $thumb_height;
-    $new_width = $width / ($height / $thumb_height);
+    $new_width = (int)($width / ($height / $thumb_height));
     } else {
     
     $new_width = $thumb_width;
-    $new_height = $height / ($width / $thumb_width);
+    $new_height = (int)($height / ($width / $thumb_width));
     }
 
     if($_FILES['myfile']['type'] === "image/jpeg" ){
@@ -91,12 +90,5 @@ function createSquareImageCopy($file, $folder, $newWidth){
         imagecolortransparent($new_image, $transparencyIndex);
 
     }
-
-
-
-
-
-
-
 
  ?>

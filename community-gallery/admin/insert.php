@@ -1,7 +1,6 @@
 <?php
 require_once("../login/classes/Login.php");
 
-
 $title = "";
 $description = "";
 $valDescription = "";
@@ -72,18 +71,21 @@ include("../includes/header.php");
 
 
 		   if ($boolValidateOK == 1){
+
 		      move_uploaded_file($_FILES["myfile"]["tmp_name"], $originalsFolder   . $_FILES["myfile"]["name"]);
 		      
 			  $thisFile = $originalsFolder . $_FILES["myfile"]["name"];
 
 			
 
-		 	 createSquareImageCopy($thisFile, $thumbsSquareFolder, 175);
-		 	 $thumbToShow = createSquareImageCopy($thisFile, $thumbsSquareSmallFolder, 50);
-		  	resizeImage($thisFile, $thumbsFolder, 150);
-		  	resizeImage($thisFile, $displayFolder, 750);
+		 	 	createSquareImageCopy($thisFile, $thumbsSquareFolder, 175);
+		 	 	// $thumbToShow = createSquareImageCopy($thisFile, $thumbsSquareSmallFolder, 50);
+		  		resizeImage($thisFile, $thumbsFolder, 150);
+		  		resizeImage($thisFile, $displayFolder, 750);
+		  		resizeImage($thisFile, $thumbsSquareSmallFolder, 50);
 
-			 $filename = $_FILES["myfile"]["name"];
+
+			 	$filename = $_FILES["myfile"]["name"];
 			  
 			  
 			  mysqli_query($con,"INSERT INTO communitygallery (filename, title, description, author_id ) VALUES ('$filename','$title', '$description', '$author_id')") or die(mysqli_error($con));
@@ -135,7 +137,7 @@ include("../includes/header.php");
 <?php 
 if($strValidationMessage){
 	if($boolValidateOK == 1){
-	echo "<div class=\"alert alert-info\"><p><i class=\"fas fa-check-circle fa-3x fa-pull-left\"></i> $strValidationMessage <img src=\"$thumbToShow\" width=\"50\" height=\"50\" class=\"img-thumbnailX\"> </p></div>";
+	echo "<div class=\"alert alert-info\"><p><i class=\"fas fa-check-circle fa-3x fa-pull-left\"></i> $strValidationMessage <img src=\"$thumbsSquareSmallFolder/$filename\" width=\"50\" height=\"50\" class=\"img-thumbnailX\"> </p></div>";
 	}else{
 		echo "<div class=\"alert alert-danger\"><p><i class=\"fas fa-exclamation-triangle fa-2x fa-pull-left\"></i> $strValidationMessage </p></div>";	
 	}

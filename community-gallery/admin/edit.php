@@ -169,13 +169,13 @@ while($row = mysqli_fetch_array($result)){
 		</div>
 
 <?php 
-if($strValidationMessage){
-	if($boolValidateOK == 1){
-	echo "<div class=\"alert alert-info\"><p><i class=\"fas fa-check-circle fa-3x fa-pull-left\"></i> $strValidationMessage <img src=\"$thumbToShow\" width=\"50\" height=\"50\" class=\"img-thumbnailX\"> </p></div>";
-	}else{
-		echo "<div class=\"alert alert-danger\"><p><i class=\"fas fa-exclamation-triangle fa-2x fa-pull-left\"></i> $strValidationMessage </p></div>";	
-	}
-}
+	// if($strValidationMessage){
+	// 	if($boolValidateOK == 1){
+	// 		echo "<div class=\"alert alert-info\"><p><i class=\"fas fa-check-circle fa-3x fa-pull-left\"></i> $strValidationMessage <img src=\"$thumbToShow\" width=\"50\" height=\"50\" class=\"img-thumbnailX\"> </p></div>";
+	// 	}else{
+	// 		echo "<div class=\"alert alert-danger\"><p><i class=\"fas fa-exclamation-triangle fa-2x fa-pull-left\"></i> $strValidationMessage </p></div>";	
+	// 	}
+	// }
 
  ?>
 
@@ -186,7 +186,6 @@ if($strValidationMessage){
  	<div class="col-sm-6">
  		<h3>Select an Image to Edit</h3>
  		<?php 
-
  			echo $navLinks ;
  		 ?>
 
