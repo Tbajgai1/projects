@@ -554,8 +554,8 @@ p {
 
 	.menu {
 		visibility: visible;
-		top: -21rem;
-		left: 5rem;
+		top: -22rem;
+		left: 7rem;
 		position: relative;
 		max-width: 88%;
 		transition: all 0.4s ease-in-out;
