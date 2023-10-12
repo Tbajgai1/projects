@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown</title>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat+Alternates:wght@500&family=Young+Serif&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- JS -->
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <h1>Countdown to Vai Tika</h1>
+    <h3>Or start your own Countdown</h3>
+
+    <form class="form">
+        <label for="day" class="label">Day</label>
+        <input class="date-input" type="number" id="day" name="day" min="01" max="31" value = 01>
+
+        <label for="months" class="label1">Month</label>
+        <select class="date-input" name="months" id="months">
+            <option value="january" >Jan</option>
+            <option value="february">Feb</option>
+            <option value="march">Mar</option>
+            <option value="april">Apr</option>
+            <option value="may">May</option>
+            <option value="june">June</option>
+            <option value="july">July</option>
+            <option value="august">Aug</option>
+            <option value="september">Sept</option>
+            <option value="october">Oct</option>
+            <option value="november">Nov</option>
+            <option value="december">Dec</option>
+        </select>
+
+        <label for="year" class="label1">Year</label>
+        <input class="date-input" type="number" id="year" name="year" min="2023" max="3000" value = 2023>
+
+        <input id="submitBtn" type="submit" class="btn" value="Submit">
+    </form>
+
+
+    <div class="countdown-container">
+
+        <!-- Days -->
+        <div class="days-c countdown-el">
+            <p class="big-text" id="days">0</p>
+            <span>Days</span>
+        </div>
+
+        <!-- Hours -->
+        <div class="hour-c countdown-el">
+            <p class="big-text" id="hours">0</p>
+            <span>Hours</span>
+        </div>
+
+        <!-- Minutes -->
+        <div class="mins-c countdown-el">
+            <p class="big-text" id="mins">0</p>
+            <span>Minutes</span>
+        </div>
+
+        <!-- Seconds -->
+        <div class="secs-c countdown-el">
+            <p class="big-text" id="secs">0</p>
+            <span>Seconds</span>
+        </div>
+    </div>
+</body>
+</html>

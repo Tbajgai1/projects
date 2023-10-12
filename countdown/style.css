@@ -1,0 +1,108 @@
+/* font-family: 'Cookie', cursive;
+font-family: 'Montserrat Alternates', sans-serif;
+font-family: 'Young Serif', serif; */
+
+/* Google font */
+@import url('https://fonts.googleapis.com/css2?family=Cookie&family=Montserrat+Alternates:wght@500&family=Young+Serif&display=swap');
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("imgs/Dashain.jpg");
+    background-size: cover;
+    background-position: center center;
+    font-family: 'Young Serif', serif;
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+}
+
+h1 {
+    font-size: clamp(1rem, 6vw, 2.5rem);
+    margin-top: -20rem;
+    color: rgb(75, 45, 8);
+}
+
+
+.big-text {
+    font-family: 'Cookie', cursive;
+    font-size: clamp(2rem, 10vw, 7rem);
+    line-height: 1;
+    margin: 0 2rem;
+    color: white;
+}
+
+.countdown-el {
+    text-align: center;
+}
+
+.countdown-el span {
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 1rem;
+    font-size: clamp(0.9rem, 2vw, 1rem);
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+}
+
+
+/* date input form */
+form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .2rem;
+    max-width: 90%;
+}
+
+label {
+    font-size: 0.8rem;
+}
+
+.label1 {
+    margin-left: 1rem;
+}
+
+.date-input {
+    /* display: block; */
+    width: 5rem;
+    height: 1.9rem;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+    border: 2px solid rgb(4, 83, 254);
+    color: green;
+    padding: 5px;
+}
+
+.date-input:focus {
+    outline: none;
+}
+
+.countdown-container {
+    display: flex;
+    margin-top: 1rem;
+}
+
+.btn {
+    margin-left: 1rem;
+    height: 1.8rem;
+    width: 6rem;
+    text-transform: uppercase;
+    border: 2px green solid;
+    background: rgb(238, 238, 249);
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: rgb(76, 105, 76);
+    color: white;
+    border: none;
+}
