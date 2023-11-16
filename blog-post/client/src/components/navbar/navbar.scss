@@ -1,0 +1,365 @@
+@import '../../App.scss';
+
+// // background
+// $Softblue: #F0F4F8;
+// // text
+// $Charcoalgray: #333333;
+
+// // (Buttons/CTA)
+// $Crimsonred : #DC143C;
+// // (Secondary)
+// $Forestgreen : #228B22;
+
+// // (Borders/Dividers)
+// $Lightgray : #CCCCCC;
+// // (Background Elements)
+// $White : #FFFFFF;
+
+// $Goldenyellow: #FFD700;
+// $Slateblue: #6A5ACD;
+/* font-family: 'Lato', sans-serif; */
+// font-family: 'Roboto', sans-serif;
+
+.navBar {
+    font-family: 'Roboto', sans-serif;
+    width: 100vw;
+    height: fit-content;
+    background-color: $Slateblue;
+    
+    @include mobile {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .container {
+        width: 100%;
+        max-width: 1300px;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 10px;
+        gap: 10px;
+
+        .logo {
+            background-color: $Crimsonred;
+            text-align: center;
+            width: 60px;
+            border-radius: 10%;
+            padding: 10px 0;
+    
+            @include mobile {
+                display: none;
+            }
+
+            img {
+                width: 100%;
+                object-fit: contain;
+            }
+
+        }
+
+        .links {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+           @include largeTablet {
+            height: 2.7rem;
+            width: 430px;
+           }
+
+           @include tablet {
+            width: 320px;
+           }
+
+           @include mobile {
+            width: 100%;
+            padding-right: 1rem;
+           }
+
+            .linkLists {
+                display: flex;
+                align-items: center;
+                margin-right: 1rem;
+                margin-left: auto;
+
+                @include largeTablet {
+                    width: 50%;
+                }
+
+                @include tablet {
+                    margin-right: auto;
+                    margin-left: 0;
+                }
+
+                @include mobile {
+                    margin-right: 0;
+                    padding-right: 0;
+                    width: 70%;
+                }
+
+                .linkListsAb {
+                    display: flex;
+                    gap: 20px;
+                    align-items: center;
+                    justify-content: flex-end;
+                    width: 100%;
+                    position: relative;
+
+                    @include largeTablet {
+
+                        flex-direction: column;
+                        gap: 2.5rem;
+                        height: 2rem;
+                        padding: 20px;
+                        justify-content: center;
+                        width: 11rem;
+                    }
+
+                    @include mobile {
+                        font-size: 1.3rem;
+                    }
+
+
+                    
+                    .link {
+                        text-decoration: none;
+                        color: $Goldenyellow;
+                        text-transform: capitalize;
+                        font-weight: 300;    
+
+                        &:hover {
+                            color: rgb(255, 174, 0);
+                        }
+
+                        @include largeTablet {
+
+                            &:hover {
+                                color: rgb(255, 174, 0);
+                            }
+                        }
+
+                        @include mobile {
+                            margin-top: 25px;
+                            margin-left: 15px;
+                        }
+                    }
+                }
+            
+                .linkListsAb.show {
+
+                    @include largeTablet {
+                        height: fit-content;
+                        background: linear-gradient(to bottom, $Slateblue, rgba(63, 91, 228, 0.9));
+                        z-index: 1;
+                        top: 12.5px !important;
+                        right: 255.3px;
+                        border-radius: 0 0 4px 4px;
+                        position: absolute;
+                        height: fit-content;
+                        overflow: auto;
+                        width: 11rem;
+                    }
+
+                    @include tablet {
+                        top: 12px !important;
+                        right: 145px;
+                    }
+
+                    @include mobile {
+                        width: 100vw;
+                        height: 100vh;
+                        top: 0 !important;
+                        right: 0;
+                    }
+                }
+            }
+
+
+            .down-arrow {
+                display: none;
+
+                @include largeTablet {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: absolute;
+                        right: 0;
+                        width: 50px;
+                        height: 50px;
+                        font-weight: bold;
+                        font-size: 2rem;
+                        cursor: pointer;
+                        z-index: 10;
+
+                        .downArrow {
+                            height: 25px;
+                            color: $Softblue;
+                            pointer-events: none;
+                            
+                            &:hover {
+                                height: 22px;
+                            }
+
+                            @include mobile {
+                                height: 35px;
+                            }
+                        }
+
+                } //mixin ends for tab
+
+                @include tablet {
+                    left: 0;
+                }
+
+                &.down-arrow-tablet {
+                    @include largeTablet {
+                        top: 6px;
+                        right: 0px;
+                    }
+                }
+            }
+
+            .profileAcc {
+                display: flex;
+                gap: 20px;
+                align-items: center;
+                width: 19rem;
+
+                .dots-wrapper {
+                    display: none;
+                }
+
+                @include largeTablet {
+                    height: 3rem;
+                    width: 14.5rem;
+
+
+                }
+
+                @include tablet {
+                    flex-direction: column;
+                    height: 35px;
+                    width: 45%;
+                    
+                    overflow: hidden;    
+                    
+
+                    .dots-wrapper {
+                        color: black;
+                        width: fit-content;
+                        height: 35px;
+                        text-align: center;
+                        cursor: pointer;
+                        display: flex;
+                        align-items: center;
+                        justify-content: flex-end;
+                        width: 100%;
+
+                        .dots {
+                            font-size: 3rem;
+                        }
+                    }
+                }
+                
+                .prof-wrapper {
+                    display: flex;
+                    gap: 17px;
+                    align-items: center;
+                    margin-left: auto;
+                    margin-right: 10px;
+
+                    @include tablet {
+                        flex-direction: column;
+
+                        &.show {
+                            position: absolute;
+                            top: 50px;
+                            right: -10px;
+                            width: 30%;
+                            height: fit-content;
+                            z-index: 100;
+                            padding-top: 10px;
+                            padding-bottom: 20px;
+                            border-radius: 0 0 4px 4px;
+                            background: linear-gradient(to bottom, $Slateblue, rgba(63, 91, 228, 0.9));
+                            
+                            @include mobile {
+                                height: 50vh;
+                                width: 100vw;
+                                top: 60px;
+
+                                justify-content: f;
+                                gap: 50px;
+                            }
+                        }
+                    }
+
+                    .writelink {
+                        padding: 7px 20px;
+                        border-radius: 2px;
+                        background-color: $Crimsonred;
+                        text-transform: uppercase;
+                        font-size: 0.8rem;
+                        font-weight: 400;
+                        text-decoration: none;
+                        color: $White;
+        
+                        &:hover {
+                            background-color: $Charcoalgray;
+                            color: $Goldenyellow;
+                        }
+    
+                        @include tablet {
+                            margin-top: 2rem;
+                        }
+                    }
+    
+                    .logout, .user, .login {
+                        color: $Goldenyellow;
+                        font-size: 0.8rem;
+                        text-transform: uppercase;
+                        cursor: pointer;
+        
+                        &:hover {
+                            color: rgb(255, 174, 0);
+                        }
+
+                    }
+
+                    .logout, .login {
+                        text-decoration: underline;
+                    }
+
+                    .user {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        align-items: center;
+                        gap: 5px;
+                        padding: 10px;
+                        // border: 1px solid green;
+
+                        .profImg {
+                            width: 40px;
+                            // border-radius: 10%;
+                        }
+
+                        .nameLink {
+                            font-size: 0.7rem;
+                            text-decoration: none !important;
+                            color: $Softblue;
+
+                        }
+                    }
+                }
+
+
+            }            
+
+        }
+    }
+}

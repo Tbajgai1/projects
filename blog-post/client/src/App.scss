@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300&display=swap');
+
+// background
+$Softblue: #F0F4F8;
+// text
+$Charcoalgray: #333333;
+
+// (Buttons/CTA)
+$Crimsonred : #924f0b;
+// (Secondary)
+$Forestgreen : #228B22;
+
+// (Borders/Dividers)
+$Lightgray : #CCCCCC;
+// (Background Elements)
+$White : #FFFFFF;
+
+$Goldenyellow: #ffe867;
+$Slateblue: #6A5ACD;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    display: flex;
+    justify-content: center;
+
+    .container {
+        width: calc(100vw - 1rem);
+        margin: auto;
+        overflow: hidden;
+    }
+}
+
+
+@mixin mobile {
+    @media (max-width: 425px) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: 540px) {
+        @content;
+    }
+}
+
+@mixin largeTablet {
+    @media (max-width: 995px) {
+        @content
+    }
+}
+

@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+}
+.app .container {
+  width: calc(100vw - 1rem);
+  margin: auto;
+  overflow: hidden;
+}
+
+/* font-family: 'Lato', sans-serif; */
+.single {
+  width: 100vw;
+}
+.single .container {
+  width: 100vw;
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 50px 15px;
+  gap: 30px;
+}
+.single .container .content {
+  flex: 4;
+  margin-left: 20px;
+}
+@media (max-width: 540px) {
+  .single .container .content {
+    margin-right: 20px;
+  }
+}
+.single .container .content .img {
+  width: 100%;
+}
+.single .container .content .img img {
+  width: 100%;
+  max-height: 400px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.single .container .content .likeComments {
+  width: -moz-fit-content;
+  width: fit-content;
+  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  font-size: 1.3rem;
+  color: #228B22;
+  margin-bottom: 20px;
+  margin-left: 10px;
+  width: 100%;
+}
+.single .container .content .likeComments .heart, .single .container .content .likeComments .comments {
+  cursor: pointer;
+}
+.single .container .content .likeComments .heart:hover, .single .container .content .likeComments .comments:hover {
+  font-size: 1.2rem;
+}
+.single .container .content .editor {
+  height: 100px;
+  margin-bottom: 50px;
+}
+.single .container .content .button {
+  width: 7rem;
+  background-color: #228B22;
+  border-radius: 2px;
+  padding: 7px 10px;
+  text-transform: uppercase;
+  font-family: "Roboto", sans-serif;
+  color: #ffe867;
+  text-align: center;
+  margin-bottom: 50px;
+  cursor: pointer;
+}
+.single .container .content .totallikes {
+  color: #924f0b;
+  font-size: 1rem;
+  margin-left: auto;
+  display: block;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  padding: 2px 5px;
+}
+.single .container .content .showComments {
+  margin-right: 10px;
+  color: #924f0b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+.single .container .content .showComments:hover {
+  font-size: 1.2rem;
+}
+.single .container .content .commentsDiv {
+  height: 0;
+  text-align: left;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+.single .container .content .commentsDiv.show {
+  height: -moz-fit-content;
+  height: fit-content;
+}
+.single .container .content .commentsDiv.show .commentsShow {
+  margin-bottom: 20px;
+  background-color: #CCCCCC;
+  padding: 10px 1rem 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.single .container .content .commentsDiv.show .commentsShow .commentText {
+  color: #924f0b;
+  font-size: 1.1rem;
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+.single .container .content .commentsDiv.show .commentsShow .commentText .delete {
+  cursor: pointer;
+}
+.single .container .content .commentsDiv.show .commentsShow .name {
+  color: #333333;
+  display: flex;
+  gap: 10px;
+  font-size: 0.8rem;
+}
+.single .container .content .commentsDiv.show .commentsShow .date {
+  text-transform: capitalize;
+}
+.single .container .content .liked {
+  color: #333333;
+  opacity: 0.7;
+}
+.single .container .content .errLogged {
+  color: red;
+  margin-top: -40px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+}
+.single .container .user {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  font-size: 0.8rem;
+  margin-top: 10px;
+}
+.single .container .user img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.single .container .user .profAvatar {
+  font-size: 2.6rem;
+  color: #924f0b;
+}
+.single .container .user .info span {
+  font-weight: bold;
+  font-size: 1rem;
+}
+.single .container .user .buttons {
+  margin-left: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.4rem;
+  gap: 5px;
+  margin-left: auto;
+}
+.single .container .user .buttons .link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+}
+.single .container .user .buttons .edit {
+  color: #228B22;
+}
+.single .container .user .buttons .edit:hover {
+  font-size: 95%;
+}
+.single .container .user .buttons .delete {
+  font-size: 1.7rem;
+}
+.single .container .user .buttons .delete:hover {
+  font-size: 105%;
+}
+.single .container .text-content {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.single .container .text-content h2 {
+  font-weight: bold;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #228B22;
+}
+.single .container .text-content > div h2 {
+  margin-top: 2rem;
+}
+.single .container .text-content > div h3 {
+  margin: 10px 0;
+}
+.single .container .text-content > div p {
+  text-align: justify;
+  line-height: 1.5rem;
+}
+.single .container .menu {
+  flex: 2;
+  width: 30%;
+}/*# sourceMappingURL=single.css.map */

@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,700;0,900;1,300;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+}
+.app .container {
+  width: 100vw;
+  margin: auto;
+  overflow: hidden;
+}
+
+/* font-family: 'Lato', sans-serif; */
+.postsWrapper {
+  min-height: calc(100vh - 10.5rem);
+  margin: 0 auto;
+  background-color: #F0F4F8;
+}
+.postsWrapper .postWrapper {
+  max-width: 1300px;
+  margin: 0 auto;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+@media (max-width: 425px) {
+  .postsWrapper .postWrapper {
+    gap: 50px;
+    padding: 20px 15px;
+  }
+}
+.postsWrapper .postWrapper .userWrapper {
+  width: 45%;
+}
+@media (max-width: 425px) {
+  .postsWrapper .postWrapper .userWrapper {
+    width: 90%;
+  }
+}
+.postsWrapper .postWrapper .userWrapper .profInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-weight: bold;
+}
+.postsWrapper .postWrapper .userWrapper .profInfo .profImg {
+  width: 35px;
+}
+.postsWrapper .postWrapper .userWrapper .profInfo .profImg img {
+  width: 100%;
+  border-radius: 10px;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+.postsWrapper .postWrapper .userWrapper .profInfo .profImg .profAvatar {
+  font-size: 2rem;
+}
+.postsWrapper .postWrapper .userWrapper .profInfo .userName {
+  text-transform: capitalize;
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.postsWrapper .postWrapper .userWrapper .profInfo .userName span {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+.postsWrapper .postWrapper .postItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+@media (max-width: 425px) {
+  .postsWrapper .postWrapper .postItem {
+    flex-direction: column;
+  }
+}
+.postsWrapper .postWrapper .postItem .img {
+  width: 45%;
+}
+@media (max-width: 425px) {
+  .postsWrapper .postWrapper .postItem .img {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+.postsWrapper .postWrapper .postItem .img img {
+  width: 100%;
+}
+.postsWrapper .postWrapper .postItem .textContent {
+  width: 50%;
+}
+@media (max-width: 425px) {
+  .postsWrapper .postWrapper .postItem .textContent {
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+.postsWrapper .postWrapper .postItem .textContent .link {
+  color: #6A5ACD;
+  text-decoration: none;
+  cursor: pointer;
+}
+.postsWrapper .postWrapper .postItem .textContent .link h3 {
+  max-width: 30ch;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 20px;
+}
+.postsWrapper .postWrapper .postItem .textContent p {
+  display: -webkit-box;
+  max-width: 400px;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.postsWrapper .postWrapper .postItem .textContent .likesComments {
+  display: flex;
+  justify-content: space-between;
+  width: -moz-fit-content;
+  width: fit-content;
+  font-size: 0.85rem;
+  color: #333333;
+  gap: 10px;
+  margin-top: 10px;
+  opacity: 0.6;
+}/*# sourceMappingURL=userposts.css.map */
