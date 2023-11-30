@@ -25,16 +25,16 @@ body {
     margin: 0;
 }
 
-h1 {
-    font-size: clamp(1.5rem, 6vw, 2.5rem);
-    margin-top: -20rem;
-    color: rgb(75, 45, 8);
+
+h2 {
+    font-size: clamp(1.6rem, 6vw, 2.5rem);
+    color: rgb(148, 86, 10);
 }
 
 
 h3 {
-    font-size: clamp(1rem, 6vw, 1.6rem);
-    color: rgb(75, 45, 8);
+    font-size: clamp(1rem, 5vw, 1.6rem);
+    color: rgb(12, 50, 88);
     margin-top: 10px;
 }
 
