@@ -2,7 +2,6 @@ import './navbar.css'
 import logo from '../../assets/allthingscoding.png';
 import { BiDotsHorizontalRounded } from 'react-icons/bi';
 import { IoIosArrowDropdown, IoIosArrowDropup } from 'react-icons/io';
-import { FaUserCircle } from "react-icons/fa";
 
 
 import { Link } from 'react-router-dom';
@@ -124,7 +123,7 @@ const Navbar = () => {
               <span className='user'>
                 <span>
                   {currentUser && imageUrl !== null ? (
-                      <img className='profImg' src={`/profImg/${imageUrl}`} alt="profile picture" />
+                      <img className='profImg' src={`/profImg/${imageUrl}`} alt="profile" />
                     ) : (
                       !currentUser ? null : <img className='profImg' src={`/profImg/avatar.png`} alt="avatar" />
                   )}

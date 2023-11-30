@@ -67,27 +67,30 @@ export const updatePost = (req, res) => {
     if (!token) return res.status(401).json("Not authorized");
     jwt.verify(token, "jwtkey", (err, userInfo) => {
         if (err) return res.status(403).json("Token is invalid");
-
         const postId = req.params.id;
 
         let q;
         let values;
 
-        if (req.body.img) {
-            q = "UPDATE posts SET `title` = ?, `desc` = ?, `img` = ?, `cat` = ? WHERE `id` = ? AND `uid` = ?";
-            values = [req.body.title, req.body.desc, req.body.img, req.body.cat, postId, userInfo.id];
-        }else if(req.body.like) {
+        if(req.body.like) {
             q = "UPDATE posts SET `likes` = ? WHERE `id` = ?";
             values = [req.body.like, req.body.id];
+        } else if (req.body.img) {
+            q = "UPDATE posts SET `title` = ?, `desc` = ?, `img` = ?, `cat` = ? WHERE `id` = ? AND `uid` = ?";
+            values = [req.body.title, req.body.desc, req.body.img, req.body.cat, postId, userInfo.id];
         }else {
             q = "UPDATE posts SET `title` = ?, `desc` = ?, `cat` = ? WHERE `id` = ? AND `uid` = ?";
             values = [req.body.title, req.body.desc, req.body.cat, postId, userInfo.id];
         }
 
         db.query(q, values, (err, data) => {
-            if (err) return res.status(500).json(err);
+            if (err) {
+                console.error("Error executing query:", err); // Log the error for debugging purposes
+                return res.status(500).json({ error: "Database error: " + err.message }); // Send the error message in the response
+            }
             return res.json("Post has been Updated");
         });
+        
     });
 };
 

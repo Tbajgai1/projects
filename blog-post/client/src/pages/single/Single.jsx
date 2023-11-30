@@ -51,6 +51,7 @@ function Single() {
       try {
         const res = await axios.get(`/posts/${postId}`);
         setPost(res.data);
+        
 
         const resLike = await axios.get(`/commentlikes/likes/${userId}?postId=${postId}`);
         setCheckLike(resLike.data);
@@ -63,71 +64,57 @@ function Single() {
       }
     };
     fetchData();
-  }, [post]);
-
+  }, [like, value, post, postId, userId, checkLike]);
 
   const handleClick = async (e) => {
     e.preventDefault();
-
-    if(currentUser) {
-      if(checkLike && checkLike.length === 0 ) {
-      
-        const likesCount = post.likes;
-        const newLike = like === '0' ? '1' : '0';
-        setLike(newLike);
-    
-        const newAddedLike = parseInt(likesCount) + parseInt(newLike);
-        // console.log(parseInt(newAddedLike))
-    
+  
+    if (currentUser) {
+      if (!checkLike || checkLike.length === 0) {
         try {
+          const newAddedLike = parseInt(post.likes) + 1;
+          setLike(newAddedLike);
+  
           await axios.put(`/posts/${post.id}`, {
             like: newAddedLike,
             id: postId,
           });
-
-          const newLiked = like === '0' ? '1' : '0';
-    
-          if(newLiked == 1) {
-            const res = await axios.post(`/commentlikes/likes`, {
-              liked: newLiked,
-              date: moment(Date.now()).format("YYYY-MM-DD HH:mm:ss"),
-              postId: postId,
-              username: currentUser.username,
-              userId: currentUser.id
-            });
-
-          };
-          //  console.log(newLiked);
+  
+          await axios.post(`/commentlikes/likes`, {
+            liked: '1',
+            date: moment(Date.now()).format("YYYY-MM-DD HH:mm:ss"),
+            postId: postId,
+            username: currentUser.username,
+            userId: currentUser.id
+          });
+  
         } catch (err) {
           console.log(err);
         }
-      } else if(checkLike && checkLike.length === 1) {
-        const likesCount = post.likes;
-        const newLike = likesCount - 1;
-
-        setLike(parseInt(newLike));
-    
+      } else if (checkLike.length === 1) {
         try {
+          const newLike = parseInt(post.likes) - 1;
+          setLike(newLike);
+          
           await axios.put(`/posts/${post.id}`, {
-            like: like,
+            like: newLike,
             id: postId,
           });
-
+  
           await axios.delete(`/commentlikes/likes/${currentUser.id}?postId=${post.id}`);
-          
+  
         } catch (err) {
           console.log(err);
         }
       }
     } else {
       setErrMsg(true);
-      
       setTimeout(() => {
         setErrMsg(false);
-      }, 4000); 
+      }, 4000);
     }
-
   };
+  
 
   // comment function 
   const handleComment = async (e) => {
@@ -165,7 +152,7 @@ function Single() {
   setOpenComment(!openComment);
   setValue('');
 
-  console.log(value);
+  // console.log(value);
   }; //End submitComment
 
 

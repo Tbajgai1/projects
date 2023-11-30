@@ -30,7 +30,6 @@ export const postLike = (req, res) => {
             return res.json("Successfully liked the post");
             });
         } else {
-            // The row already exists, handle accordingly (e.g., return an error or message)
             return res.json("Already liked the post");
         }
         });

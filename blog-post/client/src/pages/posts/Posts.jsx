@@ -25,7 +25,7 @@ function Posts() {
           }
         };
         fetchData();
-      }, []);
+      }, [userId]);
 
     
       return (
