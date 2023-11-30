@@ -10,6 +10,16 @@ inputMonth = document.querySelector('#months');
 inputYear = document.querySelector("#year")
 submitBtn = document.getElementById('submitBtn');
 
+
+// Set minimum on year input to uncoming year 
+// Get the current year
+const currentYear = new Date().getFullYear();
+const yearInput = document.getElementById('year');
+yearInput.setAttribute('min', currentYear + 1);
+yearInput.setAttribute('value', currentYear + 1);
+
+
+
 let year = 2024;
 
 let newYear = `1 jan ${year}`;
