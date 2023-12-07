@@ -2,13 +2,19 @@ const daysEl = document.getElementById('days');
 const hoursEl = document.getElementById('hours');
 const minsEl = document.getElementById('mins');
 const secsEl = document.getElementById('secs');
+const titleCoundDown = document.querySelector('.titleCountdown');
+
 
 // grab date input 
-
 inputDays = document.querySelector('#day');
 inputMonth = document.querySelector('#months');
 inputYear = document.querySelector("#year")
 submitBtn = document.getElementById('submitBtn');
+
+
+// Title Inpuit
+titleDiv = document.querySelector('#titleH2');
+titleCoundDown.innerText = 'Countdown to New Year';
 
 
 // Set minimum on year input to uncoming year 
@@ -20,12 +26,12 @@ yearInput.setAttribute('value', currentYear + 1);
 
 
 
+
 let year = 2024;
 
 let newYear = `1 jan ${year}`;
 
-    // Event listner
-
+// Event listner
 submitBtn.addEventListener('click', function(e) {
 
     e.preventDefault();
@@ -38,6 +44,17 @@ submitBtn.addEventListener('click', function(e) {
     const currentYear = currentDate.getFullYear();
     const messageDiv = document.querySelector('.erroMessage');
     let err = "Year must be larger than Current Year";
+
+
+    // Custom title input
+    const titleInput = titleDiv.value;
+    if(titleInput) {
+        titleH2 = titleInput
+        titleCoundDown.innerText = `Countdown to ${titleH2}`;
+    } 
+
+
+
 
     if(inputYearvalue <= currentYear) {
         messageDiv.innerText = err;

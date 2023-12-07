@@ -16,9 +16,16 @@
     <script src="app.js" defer></script>
 </head>
 <body>
-        <h2>Countdown to New Year</h2>
+        <h2 class="titleCountdown"></h2>
         <h3>Start your own Countdown</h3>
+
         <span class="erroMessage"></span>
+
+        <div class="countDownFor">
+            <label for="titleH2" class="label">Countdown for</label>
+            <input class="titleH2" type="text" id="titleH2" name="titleH2">
+        </div>
+
         <form class="form">
             <label for="day" class="label">Day</label>
             <input class="date-input" type="number" id="day" name="day" min="01" max="31" value = 01>

@@ -45,6 +45,15 @@ h3 {
     color: rgb(163, 29, 29);
 }
 
+.countDownFor {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 50px;
+
+}
+
+
 .big-text {
     font-family: 'Cookie', cursive;
     font-size: clamp(2rem, 10vw, 7rem);
