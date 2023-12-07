@@ -49,13 +49,16 @@ function Single() {
   useEffect(() => {
     const fetchData = async () => {
       try {
+
+        // Get posts with ID
         const res = await axios.get(`/posts/${postId}`);
         setPost(res.data);
         
-
+        // Check if user has liked the post
         const resLike = await axios.get(`/commentlikes/likes/${userId}?postId=${postId}`);
         setCheckLike(resLike.data);
-
+        
+        // Check if any comments on a post
         const resComment = await axios.get(`/commentlikes/comments/${postId}`);
         setGetComments(resComment.data);
         
@@ -64,7 +67,8 @@ function Single() {
       }
     };
     fetchData();
-  }, [like, value, post, postId, userId, checkLike]);
+  }, [like, value, postId, userId, checkLike, post, getComments]);
+
 
   const handleClick = async (e) => {
     e.preventDefault();
@@ -72,7 +76,7 @@ function Single() {
     if (currentUser) {
       if (!checkLike || checkLike.length === 0) {
         try {
-          const newAddedLike = parseInt(post.likes) + 1;
+          const newAddedLike = post.likes + 1;
           setLike(newAddedLike);
   
           await axios.put(`/posts/${post.id}`, {
@@ -93,11 +97,10 @@ function Single() {
         }
       } else if (checkLike.length === 1) {
         try {
-          const newLike = parseInt(post.likes) - 1;
+          const newLike = post.likes - 1;
           setLike(newLike);
-          
           await axios.put(`/posts/${post.id}`, {
-            like: newLike,
+            like: like,
             id: postId,
           });
   
@@ -216,9 +219,8 @@ function Single() {
                     <div key={key} className="commentsShow">
                       
                       <div className="commentText">
-                        <p>
-                          {comment?.comment}
-                        </p> 
+                      <div className="commentText" dangerouslySetInnerHTML={{ __html: comment?.comment }} />
+
 
                         {/* Show delete BTN */}
                           {currentUser !== null && post !== null && post.username !== null && currentUser.id === comment?.userId && (
