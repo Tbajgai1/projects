@@ -1,0 +1,67 @@
+@import "../variables.module.scss";
+
+// Page styles
+.main-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    h1 {
+        color: $color4;
+        margin-bottom: 3rem;
+    }
+
+    // Landing Page styles
+    .landing-wrapper {
+        width: fit-content;
+        padding: 1rem 2rem;
+        margin: 1rem 0;
+
+        h2 {
+            color: black;
+            text-align: center;
+        }
+
+        .buttons {
+            margin-top: 2rem;
+            display: flex;
+            gap: 10px;
+
+            button {
+                padding: 10px 20px;
+                background: none;
+                border: none;
+                border-radius: 5px;
+                color: rgb(39, 19, 19);
+                text-transform: uppercase;
+                font-weight: bold;
+                cursor: pointer;
+                height: fit-content;
+                width: 10rem;
+                transition: transform .2s;
+
+                &:hover {
+                    transform: scale(1.1);
+                }
+            }
+
+            .game-one {
+                background-color: $color1;
+            }
+
+            .game-two {
+                background-color: $color2;
+            }
+
+            .game-three {
+                background-color: $color4;
+            }
+        }
+
+
+    }
+}
+

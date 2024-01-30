@@ -10,7 +10,7 @@ import commentLikesRouts from "./routes/commentlikes.js";
 
 
 
-// const allowedOrigins = ['http://localhost:3000'];
+const allowedOrigins = ['http://localhost:3000'];
 
 const corsOptions = {
     origin: "*",
